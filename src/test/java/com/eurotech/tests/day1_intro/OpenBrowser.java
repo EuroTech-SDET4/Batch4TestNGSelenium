@@ -13,10 +13,16 @@ public class OpenBrowser {
         // WebDriverManager.firefoxdriver().setup();
         //  WebDriver driver = new FirefoxDriver();
 
+        //We have to enter this line every time we want open chrome
+        //hey webdrivermanager can you make chrome ready for me for automation
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver(); //poly
 
+        //WEBDRIVER represent the browser
+        //we are creating driver for chrome browser
+        //new chromeDriver() --> this part will open chrome browser
+        WebDriver driver = new ChromeDriver(); //poly
         driver.get("https://www.eurotechstudy.com");
+
 
 
 
