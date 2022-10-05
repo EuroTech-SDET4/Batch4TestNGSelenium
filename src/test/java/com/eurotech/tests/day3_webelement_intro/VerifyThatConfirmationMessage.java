@@ -58,8 +58,6 @@ public class VerifyThatConfirmationMessage {
         }
 
 
-
-
         driver.close();
 
 
