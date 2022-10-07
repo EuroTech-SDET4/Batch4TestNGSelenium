@@ -23,7 +23,7 @@ public class classNameTest {
         WebElement emailInputBox = driver.findElement(By.name("email"));
         emailInputBox.sendKeys("eurotech@gmail.com");
 
-        WebElement passwordInputBox = driver.findElement(By.name("password"));
+        WebElement passwordInputBox = driver.findElement(By.xpath("password"));
         passwordInputBox.sendKeys("Test12345!");
 
         driver.findElement(By.id("loginpage-form-btn")).click();
