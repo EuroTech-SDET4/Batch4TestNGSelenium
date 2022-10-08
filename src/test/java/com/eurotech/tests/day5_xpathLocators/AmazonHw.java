@@ -10,6 +10,7 @@ public class AmazonHw {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         String product ="Apple";
+
         driver.get("https://www.amazon.co.uk/");
         Thread.sleep(1000);
 
@@ -31,5 +32,6 @@ public class AmazonHw {
 
         driver.close();
 
+        driver.findElement(By.id("#loginpage-input-email"));
     }
 }
