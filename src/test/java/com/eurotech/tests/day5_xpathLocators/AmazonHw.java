@@ -32,6 +32,5 @@ public class AmazonHw {
 
         driver.close();
 
-        driver.findElement(By.id("#loginpage-input-email"));
     }
 }
