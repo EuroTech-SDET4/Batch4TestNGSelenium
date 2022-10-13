@@ -17,30 +17,31 @@ public class CheckboxDemo {
 
         //THIS IS HOMEWORK
 
-      //  WebElement sport = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-1']"));
-        WebElement sport = driver.findElement(By.cssSelector("#hobbies-checkbox-1"));
-        Assert.assertFalse(sport.isSelected());
-        System.out.println("sport.getText() = " + sport.getText());
+        WebElement sportsCheckBox = driver.findElement(By.cssSelector("#hobbies-checkbox-1"));
+        Assert.assertFalse(sportsCheckBox.isSelected(),"verify that sports is NOT selected");
 
-        WebElement reading = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-2']"));
-        WebElement music = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-3']"));
-
-        Assert.assertFalse(reading.isSelected(),"verify that reading is NOT selected");
-        Assert.assertFalse(music.isSelected(),"verify that music is NOT selected");
-
+        WebElement sport = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-1']"));
         sport.click();
-      //  music.click();
-        //reading.click();
 
-        Thread.sleep(4000);
+        Assert.assertTrue(sportsCheckBox.isSelected(),"verify that sport is selected");
 
-        Assert.assertTrue(sport.isSelected(),"verify that sport is selected");
-      //  Assert.assertTrue(reading.isSelected(),"verify that reading is selected");
-        //Assert.assertTrue(music.isSelected(),"verify that music is selected");
+        WebElement readingCheckBox = driver.findElement(By.cssSelector("#hobbies-checkbox-2"));
+        WebElement reading = driver.findElement(By.cssSelector("label[for='hobbies-checkbox-2']"));
+
+        reading.click();
+
+        Assert.assertTrue(readingCheckBox.isSelected(),"verify is selected");
+
+
+
+
+
 
         Thread.sleep(2000);
-
         driver.close();
 
+
     }
+
+
 }
