@@ -52,7 +52,7 @@ public class DisplayedDemo {
     }
 
     @Test
-    public void wait1() {
+    public void wait1() throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 
@@ -60,12 +60,7 @@ public class DisplayedDemo {
         WebElement hello = driver.findElement(By.xpath("//*[text()='Hello World!']"));
         startButton.click();
 
-        //How to wait explicitly?
-       //Create explicit wait object
-        WebDriverWait wait = new WebDriverWait(driver,10);
-
-        //object is ready, what is next, write your conditions.
-        wait.until(ExpectedConditions.visibilityOf(hello));
+        Thread.sleep(6000);
         System.out.println("hello = " + hello);
 
 
