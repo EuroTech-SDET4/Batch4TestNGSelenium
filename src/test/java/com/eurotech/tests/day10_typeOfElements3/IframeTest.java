@@ -74,7 +74,7 @@ public class IframeTest {
 
 
         //go to bottom frame and get text
-        driver.switchTo().defaultContent();
+        driver.switchTo().defaultContent(); //to go to HTML
        // driver.switchTo().frame(1);
         driver.switchTo().frame("frame-bottom");
         System.out.println("driver.findElement(By.tagName(\"body\")).getText() = " + driver.findElement(By.tagName("body")).getText());

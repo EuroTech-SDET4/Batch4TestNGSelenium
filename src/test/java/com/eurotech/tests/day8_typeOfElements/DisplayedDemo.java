@@ -4,6 +4,8 @@ import com.eurotech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -47,5 +49,26 @@ public class DisplayedDemo {
         //click start button
         //verify that hello element is displayed
         //and verify that "Hello World!" text is present
+    }
+
+    @Test
+    public void wait1() {
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
+
+        WebElement startButton = driver.findElement(By.cssSelector("#start>button")); //checked this element in HTML
+        WebElement hello = driver.findElement(By.xpath("//*[text()='Hello World!']"));
+        startButton.click();
+
+        //How to wait explicitly?
+       //Create explicit wait object
+        WebDriverWait wait = new WebDriverWait(driver,10);
+
+        //object is ready, what is next, write your conditions.
+        wait.until(ExpectedConditions.visibilityOf(hello));
+        System.out.println("hello = " + hello);
+
+
+        System.out.println("hello.getText() = " + hello.getText());
     }
 }
