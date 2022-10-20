@@ -88,6 +88,67 @@ public class WebTables {
 
     }
 
+    @Test
+    public void getAllCellOnOneRow() {
+
+        //get Burj Khalifa's info as a list
+        List<WebElement> burjKhalifa = driver.findElements(By.xpath("//table[@border='1']/tbody/tr[1]/td"));
+        System.out.println("burjKhalifa.size() = " + burjKhalifa.size());
+        Assert.assertEquals(burjKhalifa.size(),6);
+
+        for (WebElement burj : burjKhalifa) {
+            System.out.println("burj.getText() = " + burj.getText());
+        }
+    }
+
+    @Test
+    public void getSingleCell() {
+
+        //get height of Clock Tower Hotel
+        //verify that height is 601m
+        WebElement heightOfClockTower = driver.findElement(By.xpath("//table[@border='1']/tbody/tr[2]/td[3]"));
+        System.out.println("heightOfClockTower.getText() = " + heightOfClockTower.getText());
+        Assert.assertEquals(heightOfClockTower.getText(),"601m");
+    }
+
+    @Test
+    public void printAllCellByIndex() {
+
+        int rowNumber = getNumberOfRows();
+        int columnNumber = getNumberOfColumn();
+
+        System.out.println("rowNumber = " + rowNumber);  //4
+        System.out.println("columnNumber = " + columnNumber); //7 28
+
+        //iterate through each row on the table
+        for (int i = 1; i <=rowNumber ; i++) {
+
+            //iterate through each cell in the row
+            for (int j = 1; j <columnNumber ; j++) {
+
+                String cellXpath= "//table[@border='1']/tbody/tr["+i+"]/td["+j+"]"; //only locator
+                System.out.println("cellXpath = " + cellXpath);
+                WebElement cell = driver.findElement(By.xpath(cellXpath));
+                System.out.println("cell.getText() = " + cell.getText());
+
+            }
+        }
+
+    }
+
+    private int getNumberOfColumn() {
+
+        List<WebElement> columns = driver.findElements(By.xpath("//table[@border='1']/thead//th"));
+
+        return columns.size();
+    }
+
+    private int getNumberOfRows() {
+
+        List<WebElement> rows = driver.findElements(By.xpath("//table[@border='1']/tbody/tr"));
+        return rows.size();
+    }
+
     @AfterMethod
     public void tearDown() throws InterruptedException {
 
