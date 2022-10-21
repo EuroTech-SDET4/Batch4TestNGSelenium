@@ -13,7 +13,7 @@ public class Singleton {
 
         if(str==null){
             System.out.println("str is null, assigning a value to it");
-            str="somevalue";
+            str="chrome";
         }else {
             System.out.println("it has value , just returning it");
         }
