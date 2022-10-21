@@ -1,0 +1,12 @@
+Hello World !
+
+Eurotech is here
+
+
+
+
+/Users/erhanilgar/IdeaProjects/seleniumProject/src/main/Batch4TestNGSelenium/src/test/resources/Eurotech.txt
+/Users/erhanilgar/IdeaProjects/seleniumProject/src/main/Batch4TestNGSelenium/src/test/resources/Eurotech.txt
+
+
+
