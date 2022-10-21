@@ -1,5 +1,6 @@
 package com.eurotech.tests.day13_WebTables;
 
+import com.eurotech.utilities.ConfigurationReader;
 import com.eurotech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -109,6 +110,7 @@ public class WebTables {
         WebElement heightOfClockTower = driver.findElement(By.xpath("//table[@border='1']/tbody/tr[2]/td[3]"));
         System.out.println("heightOfClockTower.getText() = " + heightOfClockTower.getText());
         Assert.assertEquals(heightOfClockTower.getText(),"601m");
+
     }
 
     @Test
