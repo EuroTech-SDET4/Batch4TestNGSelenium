@@ -30,11 +30,13 @@ public class NegativeLoginTest extends TestBase {
 //        passwordInput.sendKeys("somePassword");
 //        driver.findElement(By.id("rcc-confirm-button")).click();
 //        driver.findElement(By.id("loginpage-form-btn")).click();
+//
+//        WebElement warningMessage = driver.findElement(By.xpath("//*[.='Invalid Credentials!']"));
+//
+//        Assert.assertEquals(warningMessage.getText(),"Invalid Credentials!","Verify that user is NOT login");
 
-        WebElement warningMessage = driver.findElement(By.xpath("//*[.='Invalid Credentials!']"));
-
-        Assert.assertEquals(warningMessage.getText(),"Invalid Credentials!","Verify that user is NOT login");
-
+        String actualText = loginPage.warningMessage.getText();
+        Assert.assertEquals(actualText,"Invalid Credentials!");
 
 
     }

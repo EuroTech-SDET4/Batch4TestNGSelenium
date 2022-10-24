@@ -27,6 +27,17 @@ public class LoginPage {
     @FindBy(xpath = "//*[.='Invalid Credentials!']")
     public WebElement warningMessage;
 
+    @FindBy(id = "dashboard-h1")
+    public WebElement dashboardText;
+
+
+    public void login(String username,String password){
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        understandBtn.click();
+        loginBtn.click();
+    }
+
 
 
 }
