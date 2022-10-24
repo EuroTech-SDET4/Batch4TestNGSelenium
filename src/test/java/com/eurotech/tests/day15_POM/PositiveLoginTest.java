@@ -40,4 +40,19 @@ public class PositiveLoginTest extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/dashboard");
     }
 
+    @Test
+    public void loginAsTeacher() {
+        driver.get(ConfigurationReader.get("url"));
+        loginPage.loginAsTeacher();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.dashboardText));
+        Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/dashboard");
+    }
+
+    @Test
+    public void loginAsStudent() {
+        driver.get(ConfigurationReader.get("url"));
+        loginPage.loginAsStudent();
+        wait.until(ExpectedConditions.visibilityOf(loginPage.dashboardText));
+        Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/dashboard");
+    }
 }
