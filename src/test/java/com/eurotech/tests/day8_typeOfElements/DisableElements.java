@@ -12,7 +12,7 @@ public class DisableElements {
 
     @Test
     public void test1() throws InterruptedException {
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("firefox");
 
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 

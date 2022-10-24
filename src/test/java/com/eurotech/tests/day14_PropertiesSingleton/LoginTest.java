@@ -12,6 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.security.Key;
 import java.util.concurrent.TimeUnit;
 
 public class LoginTest extends TestBase {
@@ -24,7 +25,6 @@ public class LoginTest extends TestBase {
 
         driver.findElement(By.id("loginpage-input-email")).sendKeys(ConfigurationReader.get("usernameTeacher"));
         driver.findElement(By.id("loginpage-form-pw-input")).sendKeys(ConfigurationReader.get("passwordTeacher")+ Keys.ENTER);
-
 
 
 

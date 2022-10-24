@@ -17,7 +17,5 @@ public class AnotherLoginTest extends TestBase {
         usernameInput.sendKeys(ConfigurationReader.get("usernameTeacher"));
         passwordInput.sendKeys(ConfigurationReader.get("passwordTeacher")+ Keys.ENTER);
 
-
-
     }
 }
