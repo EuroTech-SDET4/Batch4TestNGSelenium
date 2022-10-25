@@ -22,9 +22,6 @@ public class LoginPage extends BasePage{
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginBtn;
 
-    @FindBy(id = "rcc-confirm-button")
-    public WebElement understandBtn;
-
     @FindBy(xpath = "//*[.='Invalid Credentials!']")
     public WebElement warningMessage;
 
