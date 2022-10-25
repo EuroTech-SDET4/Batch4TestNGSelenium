@@ -1,5 +1,6 @@
 package com.eurotech.tests.day10_typeOfElements3;
 
+import com.eurotech.utilities.BrowserUtils;
 import com.eurotech.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -74,6 +75,16 @@ public class MultipleWindows {
         }
         System.out.println("driver.getTitle() = " + driver.getTitle());
 
+
+    }
+
+    @Test
+    public void testUtils() {
+        driver.get("https://the-internet.herokuapp.com/windows");
+        WebElement click_here = driver.findElement(By.linkText("Click Here"));
+        click_here.click();
+
+        BrowserUtils.switchToWindow("New Window");
 
     }
 

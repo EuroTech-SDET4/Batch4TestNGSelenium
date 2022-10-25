@@ -11,6 +11,8 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.get(),this);
     }
 
+
+
     @FindBy(id = "rcc-confirm-button")
     public WebElement understandBtn;
 }
