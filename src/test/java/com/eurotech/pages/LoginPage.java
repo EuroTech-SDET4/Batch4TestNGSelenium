@@ -8,11 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import java.util.List;
 
-    public LoginPage(){
-        PageFactory.initElements(Driver.get(),this);
-    }
+public class LoginPage extends BasePage{
 
 
     @FindBy(id = "loginpage-input-email")
@@ -32,6 +30,10 @@ public class LoginPage {
 
     @FindBy(id = "dashboard-h1")
     public WebElement dashboardText;
+
+
+    @FindBy(css = ".menu-list")
+    public List<WebElement> menuList;
 
     @FindAll({
             @FindBy(id = "loginpage-input-email"),
