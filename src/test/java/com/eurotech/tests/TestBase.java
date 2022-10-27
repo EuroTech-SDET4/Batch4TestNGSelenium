@@ -19,8 +19,8 @@ public class TestBase {
     public void setUp() {
         driver= Driver.get();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        actions=new Actions(driver);
-        wait=new WebDriverWait(driver,15);
+        actions=new Actions(Driver.get());
+        wait=new WebDriverWait(Driver.get(),15);
 
     }
 

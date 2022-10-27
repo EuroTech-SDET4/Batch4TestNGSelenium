@@ -4,10 +4,12 @@ import com.eurotech.pages.DashboardPage;
 import com.eurotech.pages.LoginPage;
 import com.eurotech.tests.TestBase;
 import com.eurotech.utilities.ConfigurationReader;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardTest extends TestBase {
@@ -28,7 +30,7 @@ public class DashboardTest extends TestBase {
          */
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
-        String expectedText = "Welcome Eurotech";
+        String expectedText = "Welcome Teacher";
         Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
 
         //1 way
@@ -59,7 +61,7 @@ public class DashboardTest extends TestBase {
 
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
-        String expectedText = "Welcome Eurotech";
+        String expectedText = "Welcome Teacher";
         Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
 
 
@@ -69,7 +71,7 @@ public class DashboardTest extends TestBase {
         dashboardPage.developers.click();
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/profiles");
 
-
+        dashboardPage.myAccount.click();
 
 
     }
@@ -78,7 +80,7 @@ public class DashboardTest extends TestBase {
     public void navigate2() {
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
-        String expectedText = "Welcome Eurotech";
+        String expectedText = "Welcome Teacher";
         Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
 
 
@@ -89,6 +91,6 @@ public class DashboardTest extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/posts");
 
         dashboardPage.navigateToMenu("My Account");
-
     }
+
 }

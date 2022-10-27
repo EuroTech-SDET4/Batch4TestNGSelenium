@@ -33,6 +33,7 @@ public class LoginPage extends BasePage{
     public List<WebElement> menuList;
 
     @FindAll({
+            //or
             @FindBy(id = "loginpage-input-email"),
             @FindBy(name="email")
     })
@@ -40,6 +41,7 @@ public class LoginPage extends BasePage{
 
 
     @FindBys({
+            //and
             @FindBy(tagName = "p"),
             @FindBy(id = "dashboard-user-icon")
     })
