@@ -7,15 +7,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WrongUsernameTest extends TestBase {
-
+    LoginPage loginPage = new LoginPage();
 
     @Test
     public void wrongUsername() {
-        //name of the test
+        //name of the test  Break till : 19:40
 
         extentLogger= report.createTest("Wrong Username Test");
 
-        LoginPage loginPage = new LoginPage();
+
 
         extentLogger.info("Click Understand button");
         loginPage.understandBtn.click();
@@ -32,7 +32,7 @@ public class WrongUsernameTest extends TestBase {
         String actualMessage = loginPage.warningMessage.getText();
 
         extentLogger.info("Verify that not log in");
-        Assert.assertEquals(actualMessage,"Invalid Credentials!");
+        Assert.assertEquals(actualMessage,"Invalid Credential!");
 
 
         extentLogger.pass("PASSED");
