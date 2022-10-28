@@ -62,14 +62,14 @@ public class DashboardTest extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
         String expectedText = "Welcome Teacher";
-        Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
+        Assert.assertEquals(dashboardPage.welcomeMessage.getText(), expectedText, "Verify that log in successfully");
 
 
         dashboardPage.allPosts.click();
-        Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/posts");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://eurotech.study/posts");
 
         dashboardPage.developers.click();
-        Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/profiles");
+        Assert.assertEquals(driver.getCurrentUrl(), "http://eurotech.study/profiles");
 
         dashboardPage.myAccount.click();
 

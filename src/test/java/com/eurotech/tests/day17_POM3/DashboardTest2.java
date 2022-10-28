@@ -24,7 +24,7 @@ public class DashboardTest2 extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
         String expectedText = "Welcome Teacher";
-        Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
+        Assert.assertEquals(dashboardPage.welcomeMessage.getText(), expectedText, "Verify that log in successfully");
 
         List<String> expectedList = new ArrayList<>();
         expectedList.add("Developers");
@@ -33,7 +33,7 @@ public class DashboardTest2 extends TestBase {
 
         List<String> actualList = new ArrayList<>();
 
-        for (WebElement menu :dashboardPage.menuList ) {
+        for (WebElement menu : dashboardPage.menuList) {
             System.out.println("menu.getText() = " + menu.getText());
             actualList.add(menu.getText());
 
@@ -41,7 +41,7 @@ public class DashboardTest2 extends TestBase {
         System.out.println("actualList = " + actualList);
         System.out.println("expectedList = " + expectedList);
 
-        Assert.assertEquals(actualList,expectedList,"Verify that lists are matched");
+        Assert.assertEquals(actualList, expectedList, "Verify that lists are matched");
 
     }
 
@@ -50,17 +50,17 @@ public class DashboardTest2 extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
         String expectedText = "Welcome Teacher";
-        Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
+        Assert.assertEquals(dashboardPage.welcomeMessage.getText(), expectedText, "Verify that log in successfully");
 
         List<String> expectedList = new ArrayList<>();
         expectedList.add("Developers");
         expectedList.add("All Posts");
         expectedList.add("My Account");
 
-     //   Assert.assertEquals(BrowserUtils.getElementsText(dashboardPage.menuList),expectedList);
+        //   Assert.assertEquals(BrowserUtils.getElementsText(dashboardPage.menuList),expectedList);
 
         List<String> actualList = BrowserUtils.getElementsText(dashboardPage.menuList);
-        Assert.assertEquals(actualList,expectedList);
+        Assert.assertEquals(actualList, expectedList);
     }
 
     @Test
@@ -75,17 +75,16 @@ public class DashboardTest2 extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         loginPage.loginAsTeacher();
         String expectedText = "Welcome Teacher";
-        Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedText,"Verify that log in successfully");
+        Assert.assertEquals(dashboardPage.welcomeMessage.getText(), expectedText, "Verify that log in successfully");
 
         dashboardPage.navigateToMenu("My Account");
         dashboardPage.navigateToSubMenu("My Posts");
 
-        Assert.assertTrue(dashboardPage.submitBtn.isDisplayed(),"verify that submit button is displayed");
+        Assert.assertTrue(dashboardPage.submitBtn.isDisplayed(), "verify that submit button is displayed");
         dashboardPage.navigateToMenu("My Account");
         dashboardPage.navigateToSubMenu("Logout");
 
-        Assert.assertTrue(loginPage.loginBtn.isDisplayed(),"Verify that login button is displayed ");
-
+        Assert.assertTrue(loginPage.loginBtn.isDisplayed(), "Verify that login button is displayed ");
 
 
     }
