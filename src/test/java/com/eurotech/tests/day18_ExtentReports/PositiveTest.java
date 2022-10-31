@@ -8,7 +8,7 @@ public class PositiveTest extends TestBase {
 
 
     @Test
-    public void test1() {
+    public void loginTest() {
         LoginPage loginPage=new LoginPage();
         extentLogger= report.createTest("Test");
 
