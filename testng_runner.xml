@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+ 
+<!--        How to run all tests cases in one class without one-->
+<suite name="Eurotech Automation" verbose="1">
+    <test name="Eurotech Smoke Test">
+       <classes>
+           <class name="com.eurotech.tests.day13_WebTables.WebTables">
+               <methods>
+                   <exclude name="getSingleCell"></exclude>
+               </methods>
+           </class>
+       </classes>
+    </test>
+</suite>

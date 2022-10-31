@@ -44,7 +44,7 @@ public class VerifyUserInfo extends TestBase {
 
         //1 way to verify log in successfully
         extentLogger.info("Verify that login is successful");
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
         Assert.assertEquals(driver.getCurrentUrl(),"http://eurotech.study/dashboard");
 
         //2 way to verify log in successfully
@@ -71,10 +71,6 @@ public class VerifyUserInfo extends TestBase {
         Assert.assertEquals(profilePage.jobTitle.getText(),expectedJobTitle);
 
         extentLogger.info("Passed");
-
-
-
-
 
     }
 }
