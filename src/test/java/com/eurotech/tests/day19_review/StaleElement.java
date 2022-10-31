@@ -52,6 +52,10 @@ public class StaleElement extends TestBase {
         catch (StaleElementReferenceException e){
             emailInput = driver.findElement(By.name("email"));
             emailInput.sendKeys("email@hotmail.com");
+            passwordInput= driver.findElement(By.name("password"));
+            passwordInput.sendKeys("new password");
         }
+
+
     }
 }
