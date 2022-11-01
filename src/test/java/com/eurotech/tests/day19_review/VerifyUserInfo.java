@@ -52,7 +52,8 @@ public class VerifyUserInfo extends TestBase {
         extentLogger.info("Verify that login is successful from Dashboard Page and message is "+expectedMessage);
      //   String actualMessage= new DashboardPage().welcomeMessage.getText();
           String actualMessage = dashboardPage.welcomeMessage.getText();
-          Assert.assertEquals(actualMessage,"Welcome Teacher");
+        System.out.println("actualMessage = " + actualMessage);
+        Assert.assertEquals(actualMessage,"Welcome Teacher");
 
           //                       DASHBOARD PAGE                //
         extentLogger.info("Click Edit Profile");
@@ -68,7 +69,7 @@ public class VerifyUserInfo extends TestBase {
 
         String expectedJobTitle= "Test Automation Engineer";
         extentLogger.info("Verify that job title is "+expectedJobTitle);
-        Assert.assertEquals(profilePage.jobTitle.getText(),expectedJobTitle);
+        Assert.assertEquals(dashboardPage.jobTitle.getText(),expectedJobTitle);
 
         extentLogger.info("Passed");
 

@@ -12,6 +12,5 @@ public class ProfilePage extends BasePage{
     @FindBy(linkText = "Go Back")
     public WebElement goBackButton;
 
-    @FindBy(xpath = "//*[text()='Test Automation Engineer']/../td[2]")
-    public WebElement jobTitle;
+
 }

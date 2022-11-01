@@ -33,6 +33,12 @@ public class DashboardPage extends BasePage{
            @FindBy(xpath = "//*[text()='Edit Profile']")
             public WebElement editProfile;
 
+          @FindBy(xpath = "//*[text()='Test Automation Engineer']/../td[2]")
+          public WebElement jobTitle;
+
+          @FindBy(xpath = "//td[text()='Apple']")
+          public WebElement companyName;
+
            public void navigateToMenu(String menuName){
                Driver.get().findElement(By.xpath("//*[text()='"+menuName+"']")).click();
 
@@ -44,6 +50,14 @@ public class DashboardPage extends BasePage{
 
            public void dashboardMenu(String menuName){
                Driver.get().findElement(By.xpath("//*[text()='"+menuName+"']")).click();
+           }
+
+           public String  getTitle(String title){
+            return   Driver.get().findElement(By.xpath("//td[text()='"+title+"']")).getText();
+           }
+
+           public String getCompany(String companyName){
+             return   Driver.get().findElement(By.xpath("//td[text()='"+companyName+"']")).getText();
            }
 
 }
