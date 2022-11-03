@@ -18,7 +18,7 @@ public class ExcelUtilDemo {
         //Argument 1 : location of the file (path)
         //Argument 2 : sheet that we want to open(sheetName)
 
-        ExcelUtil testData = new ExcelUtil("src/test/resources/EurotechTest.xls","Test Data");
+        ExcelUtil testData = new ExcelUtil("src/test/resources/EurotechTestLast.xls","Eurotech");
 
         //How many rows in the sheet
         System.out.println("testData.rowCount() = " + testData.rowCount());

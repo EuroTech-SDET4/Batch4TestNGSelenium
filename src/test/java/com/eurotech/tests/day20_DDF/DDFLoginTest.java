@@ -16,7 +16,7 @@ public class DDFLoginTest extends TestBase {
     public Object [][] userData(){
 
 
-        ExcelUtil testData = new ExcelUtil("src/test/resources/EurotechTest.xls","Test Data");
+        ExcelUtil testData = new ExcelUtil("src/test/resources/EurotechTestLast.xls","Test Data");
 
         return testData.getDataArrayWithoutFirstRow();
     }
@@ -54,9 +54,6 @@ public class DDFLoginTest extends TestBase {
 
 
         extentLogger.pass("PASSED");
-
-
-
 
 
     }
