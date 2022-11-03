@@ -15,7 +15,7 @@ public class DDFWithDataProvider {
     public Object [][] tvAndRating(){
 
         String [][] data = {
-                {"eurotech@gmail.com","Test12345!"},
+                {"Game Of Thrones","9"},
                 {"Sherlock Holmes","9"},
                 {"Lord Of The Rings","8"},
                 {"Breaking Bad","9"},
@@ -31,10 +31,7 @@ public class DDFWithDataProvider {
     @Test(dataProvider = "tvAndRating")
     public void testTvShow(String tvShow,String rating) {
 
-
-
         System.out.println("Tv Show "+tvShow+" has rating "+rating);
-
 
     }
 }
