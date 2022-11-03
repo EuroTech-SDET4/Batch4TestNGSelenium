@@ -43,6 +43,8 @@ public class DDFLoginTest extends TestBase {
         String expectedMessage = "Welcome "+name;
         extentLogger.info("verify that welcome message is "+expectedMessage);
 
+
+
         Assert.assertEquals(dashboardPage.welcomeMessage.getText(),expectedMessage);
 
         extentLogger.info("Verify that title is "+title);
@@ -54,6 +56,7 @@ public class DDFLoginTest extends TestBase {
 
 
         extentLogger.pass("PASSED");
+
 
 
     }
